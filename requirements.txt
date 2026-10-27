@@ -1,0 +1,11 @@
+# Prefer: uv pip install -e .
+# This file mirrors pyproject.toml for pip-only workflows.
+
+numpy>=1.26
+pillow>=10.0
+python-dotenv>=1.0
+requests>=2.31
+torch>=2.2
+torchvision>=0.17
+tqdm>=4.66
+transformers>=4.40

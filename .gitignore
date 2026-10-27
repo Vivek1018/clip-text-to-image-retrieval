@@ -1,0 +1,33 @@
+# Environment and secrets
+.venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.dist/
+build/
+src/*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data (add your own images; do not commit personal photos)
+data/images/*
+!data/images/.gitkeep
+data/embeddings/*
+!data/embeddings/.gitkeep
+data/image_embeddings/
+data/audio_transcripts/
+outputs/
+
+# Bloated notebook copy (use notebooks/Image_Text_Clip_Embeddings.ipynb)
+notebooks/src/Image_Text_Clip_Embeddings.ipynb
+*.pt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,42 @@
+[project]
+name = "clip-text-to-image-retrieval"
+version = "0.1.0"
+description = "Local text-to-image retrieval with OpenAI CLIP embeddings (no cloud API)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Vivek Kumar Verma", email = "Vivek.verma1018@gmail.com" }]
+keywords = ["clip", "computer-vision", "retrieval", "pytorch", "multimodal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pillow>=10.0",
+    "python-dotenv>=1.0",
+    "requests>=2.31",
+    "torch>=2.2",
+    "torchvision>=0.17",
+    "tqdm>=4.66",
+    "transformers>=4.40",
+]
+
+[project.optional-dependencies]
+dev = ["ipython", "jupyter", "matplotlib", "seaborn"]
+viz = ["matplotlib"]
+
+[project.scripts]
+clip-retrieval = "clip_retrieval.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.uv]
+dev-dependencies = ["ipython", "jupyter", "matplotlib", "seaborn"]
